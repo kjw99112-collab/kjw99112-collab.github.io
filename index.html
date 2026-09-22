@@ -5,14 +5,14 @@
 <meta name="naver-site-verification" content="adf82a2456b68c854cd83826cce485454bf64d2c" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>(주)두자 DooJa | 구조·토목·가시설·태양광 설계 전문 엔지니어링 [R10]</title>
+<title>(주)두자 DooJa | 구조·토목·가시설·태양광 설계 전문 엔지니어링 [R13]</title>
 <meta name="description" content="(주)두자는 철도, 토질 및 기초, 구조, 측량 등 4개 분야 설계 및 건설사업관리에 참여하고 있으며, 설계안전성검토(DFS), 건설현장 가설구조물 안전성 검토 및 태양광 발전에 풍부한 경험과 기술력 확보, 차별화된 서비스로 신뢰할 수 있는 기업입니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 /* =====================================================
-   (주)두자 DooJa Engineering - Revision R10
+   (주)두자 DooJa Engineering - Revision R13
    - 수행실적(Projects) 수행년도(기간) 컬럼 추가 및 연도별 정렬
    - 작업실적(Portfolio) 딥블루 테크니컬 디자인 & 정돈된 도면 카드
    - 회사 정확한 네이버 위성 위치도 연동 및 길찾기
@@ -224,11 +224,20 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 
 .portfolio-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 28px;
+    justify-content: center;
 }
-@media (max-width:960px){.portfolio-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:600px){.portfolio-grid{grid-template-columns:1fr}}
+/* When filtered, cards nicely expand to balanced 2-column or 3-column */
+.portfolio-grid.grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width:960px){
+    .portfolio-grid{grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;}
+}
+@media (max-width:640px){
+    .portfolio-grid{grid-template-columns: 1fr; gap: 16px;}
+}
 
 /* Blue Blueprint Card Style */
 .portfolio-card{
@@ -602,14 +611,14 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 <!-- SERVICES (업무분야: 1번 가설구조물, 2번 태양광) -->
 <section id="services">
 <div class="container">
-<div class="section-header section-header-center"><span class="section-tag">SERVICES</span><h2>업무분야</h2><p class="section-desc">가설구조물 안전검토부터 태양광, 토목구조, 흙막이까지 전문 엔지니어링 서비스를 제공합니다.</p></div>
+<div class="section-header section-header-center"><span class="section-tag">SERVICES</span><h2>업무분야</h2><p class="section-desc">가설구조물부터 태양광, 토목구조, 흙막이, 철도 및 도로까지 5대 핵심 엔지니어링 서비스를 제공합니다.</p></div>
 <div class="services-grid">
 
-<!-- 01. 가설구조물 (DFS) 분야 -->
+<!-- 01. 가설구조물 분야 -->
 <div class="service-card">
 <div class="service-num">01</div>
-<h3>가설구조물 (DFS) 분야</h3>
-<p>Design for Safety — 시공 중 위험요소를 사전에 도출·제거하는 6대 가설엔지니어링 안전성 검토</p>
+<h3>가설구조물 분야</h3>
+<p>시공 중 위험요소를 사전에 도출·제거하는 6대 가설엔지니어링 안전성 검토 및 가설구조 해석</p>
 <ul class="service-list"><li>가설울타리(EGI휀스/RPP휀스) 풍하중 및 지지구조 검토</li><li>벽체·기둥 거푸집(유로폼, 원형폼, 코핑폼) 측압 검토</li><li>시스템 동바리(H=5m 이상) 전산 구조해석</li><li>시스템 비계(강관비계/쌍줄비계) 벽이음 및 작업발판</li><li>터널 라이닝폼 및 특수 시공용 작업대차 3D 구조해석</li></ul>
 <a href="#portfolio" class="service-btn" data-filter="temp"><span>작업실적 보기</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
 </div>
@@ -641,22 +650,13 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 <a href="#portfolio" class="service-btn" data-filter="retaining"><span>작업실적 보기</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
 </div>
 
-<!-- 05. 철도 및 CM 분야 -->
+<!-- 05. 철도 및 도로 분야 -->
 <div class="service-card">
 <div class="service-num">05</div>
-<h3>철도 및 CM 분야</h3>
-<p>고속철도, 광역철도(GTX), 도시철도 분야의 노반·궤도·구조물 설계 및 전 공정 건설사업관리</p>
-<ul class="service-list"><li>철도 노반 및 특수교량 실시설계</li><li>지하철 정거장 환승체계 구조계획</li><li>시공 단계별 건설사업관리(감리) 용역</li><li>철도보호지구 인접공사 안전영향평가</li></ul>
+<h3>철도 및 도로 분야</h3>
+<p>고속철도, 광역철도(GTX), 도시철도 및 고속도로·일반국도의 노반·선형·구조물 설계</p>
+<ul class="service-list"><li>철도 노반 및 특수교량 실시설계</li><li>고속도로 및 간선도로 설계·선형계획</li><li>지하철 정거장 환승체계 구조계획</li><li>철도보호지구 인접공사 안전영향평가</li></ul>
 <a href="#projects" class="service-btn" data-filter="cm"><span>수행실적 보기</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
-</div>
-
-<!-- 06. 안전진단 및 평가 -->
-<div class="service-card">
-<div class="service-num">06</div>
-<h3>안전진단 및 평가</h3>
-<p>지하안전평가, 정밀안전진단, 구조물 내구성 평가를 통한 선제적 위험관리</p>
-<ul class="service-list"><li>지하안전영향평가 및 사후지하안전조사</li><li>기존 노후 구조물 정밀안전진단</li><li>보수·보강 설계 및 내진성능평가</li><li>지반 침하 계측 및 변위 모니터링</li></ul>
-<a href="#projects" class="service-btn" data-filter="safety"><span>수행실적 보기</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
 </div>
 
 </div>
@@ -674,7 +674,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 
 <div class="portfolio-tabs">
 <button type="button" class="portfolio-tab-btn active" data-pfilter="all">전체보기</button>
-<button type="button" class="portfolio-tab-btn" data-pfilter="temp">가설구조물(DFS)</button>
+<button type="button" class="portfolio-tab-btn" data-pfilter="temp">가설구조물</button>
 <button type="button" class="portfolio-tab-btn" data-pfilter="solar">태양광 발전</button>
 <button type="button" class="portfolio-tab-btn" data-pfilter="civil">토목구조</button>
 <button type="button" class="portfolio-tab-btn" data-pfilter="retaining">흙막이 가시설</button>
@@ -682,7 +682,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 
 <div class="portfolio-grid">
 
-<!-- 1. 가설구조물(DFS) 6대 분류 실적 -->
+<!-- 1. 가설구조물 6대 분류 실적 -->
 <div class="portfolio-card" data-cat="temp" onclick="openLightbox(this)">
 <div class="portfolio-thumb">
 <img src="img/portfolio/temp_fence_angi.jpg" alt="안기복개천 가설울타리 구조검토 도면">
@@ -801,30 +801,6 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 <div class="portfolio-info">
 <h3>평택 삼계리 태양광 발전소 표준 구조계산서</h3>
 <p>두자 자체 표준양식 구조계산서 및 풍속 30m/s 안전성 검토</p>
-</div>
-</div>
-
-<div class="portfolio-card" data-cat="solar" onclick="openLightbox(this)">
-<div class="portfolio-thumb">
-<img src="img/portfolio/solar_geumyoung.jpg" alt="칠곡 금영 지붕형 태양광 3차원 입체해석">
-<span class="portfolio-badge badge-tag-solar">지붕형 태양광</span>
-<span class="portfolio-zoom-hint">도면확대 🔍</span>
-</div>
-<div class="portfolio-info">
-<h3>칠곡 금영 지붕형 태양광 3차원 입체해석</h3>
-<p>기존 공장 철골구조물 연계 3차원 프레임 전산해석 및 구조안전확인</p>
-</div>
-</div>
-
-<div class="portfolio-card" data-cat="solar" onclick="openLightbox(this)">
-<div class="portfolio-thumb">
-<img src="img/portfolio/solar_seungwoo.jpg" alt="완주 승우 태양광 3D 전산구조해석">
-<span class="portfolio-badge badge-tag-solar">태양광 발전</span>
-<span class="portfolio-zoom-hint">도면확대 🔍</span>
-</div>
-<div class="portfolio-info">
-<h3>완주 승우 태양광 3D 전산구조해석</h3>
-<p>MIDAS GEN 3차원 프레임해석 및 구조기술사 안전확인서 발급</p>
 </div>
 </div>
 
@@ -953,7 +929,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 
 <div class="projects-tabs">
 <button class="tab-btn active" data-tab="all">전체 실적</button>
-<button class="tab-btn" data-tab="temp">가설구조물(DFS)</button>
+<button class="tab-btn" data-tab="temp">가설구조물</button>
 <button class="tab-btn" data-tab="solar">태양광</button>
 <button class="tab-btn" data-tab="civil">토목구조</button>
 <button class="tab-btn" data-tab="retaining">흙막이 가시설</button>
@@ -972,7 +948,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 </tr>
 </thead>
 <tbody>
-<!-- 1. 가설구조물 (DFS) -->
+<!-- 1. 가설구조물 -->
 <tr data-cat="temp"><td><span class="project-year">2026</span></td><td>안기복개천 생태하천 복원사업</td><td>가설 EGI울타리(휀스) 풍하중 및 지주 지반구조검토</td><td>안동시</td><td><span class="badge badge-temp">가설울타리</span></td></tr>
 <tr data-cat="temp"><td><span class="project-year">2025</span></td><td>당진축산 바이오가스화 공공처리시설</td><td>액비저장조 벽체 거푸집(유로폼) 측압 및 전도방지 검토</td><td>당진축산농협</td><td><span class="badge badge-temp">거푸집</span></td></tr>
 <tr data-cat="temp"><td><span class="project-year">2025</span></td><td>아산모종샛들지구 도시개발사업</td><td>저류조 구조물 H=4.05m 시스템 동바리 MIDAS 해석</td><td>아산시</td><td><span class="badge badge-temp">동바리</span></td></tr>
@@ -983,8 +959,6 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 <!-- 2. 태양광 발전 -->
 <tr data-cat="solar"><td><span class="project-year">2026</span></td><td>경주 삼지2호 태양광 발전소</td><td>지상형 태양광 구조설계, 내진검토 및 지반조사 연계</td><td>경북 경주시</td><td><span class="badge badge-solar">태양광</span></td></tr>
 <tr data-cat="solar"><td><span class="project-year">2025</span></td><td>평택 삼계리 283-1 태양광발전소</td><td>두자 표준양식 구조계산서 및 풍속 30m/s 3D 해석</td><td>경기 평택시</td><td><span class="badge badge-solar">태양광</span></td></tr>
-<tr data-cat="solar"><td><span class="project-year">2025</span></td><td>칠곡 금영 지붕형 태양광발전소</td><td>기존 공장 철골구조물 연계 3차원 입체구조해석</td><td>경북 칠곡군</td><td><span class="badge badge-solar">태양광</span></td></tr>
-<tr data-cat="solar"><td><span class="project-year">2024</span></td><td>완주 승우 태양광 발전소</td><td>3차원 프레임 전산구조해석(MIDAS GEN) 및 안전확인서</td><td>전북 완주군</td><td><span class="badge badge-solar">태양광</span></td></tr>
 <tr data-cat="solar"><td><span class="project-year">2024</span></td><td>신세계6호 태양광 발전시설</td><td>경사각 13° 모듈 측면도 및 포스맥(PosMAC) 상세설계</td><td>후광일렉트릭 협력</td><td><span class="badge badge-solar">태양광</span></td></tr>
 
 <!-- 3. 토목구조 -->
@@ -1247,13 +1221,13 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 <div class="footer-brand">
 <img src="img/logo.png" alt="(주)두자" class="footer-logo">
 <p>구조와 안전을 설계하는<br>건설엔지니어링 전문기업</p>
-<p style="margin-top:10px;font-size:12px;color:var(--orange-400)">홈페이지 리비전: R10 (수행실적 수행년도 컬럼 추가 및 도면/지도 고도화)</p>
+<p style="margin-top:10px;font-size:12px;color:var(--orange-400)">홈페이지 리비전: R13 (태양광 및 작업실적 4대 핵심 분야 2x2 완벽 대칭 레이아웃 배치)</p>
 </div>
 <div class="footer-links"><h4>바로가기</h4><ul><li><a href="#about">회사소개</a></li><li><a href="#services">업무분야</a></li><li><a href="#portfolio">작업실적</a></li><li><a href="#projects">수행실적</a></li><li><a href="#team">인증·특허</a></li><li><a href="#contact">오시는 길</a></li></ul></div>
-<div class="footer-links"><h4>업무분야</h4><ul><li><a href="#services">가설구조물 검토(DFS)</a></li><li><a href="#services">태양광 구조해석</a></li><li><a href="#services">토목구조 설계</a></li><li><a href="#services">흙막이 가시설</a></li></ul></div>
+<div class="footer-links"><h4>업무분야</h4><ul><li><a href="#services">가설구조물</a></li><li><a href="#services">태양광 발전</a></li><li><a href="#services">토목구조</a></li><li><a href="#services">흙막이 가시설</a></li><li><a href="#services">철도 및 도로</a></li></ul></div>
 <div class="footer-contact"><h4>연락처</h4><p>서울 동대문구 장한로24길 21, JK빌딩 5층</p><p>T. 02-2213-2634</p><p>F. 02-2213-2635</p><p>E. info@dooja.co.kr</p></div>
 </div>
-<div class="footer-bottom"><p>&copy; 2026 (주)두자 DooJa Engineering. All rights reserved. | Revision R10</p></div>
+<div class="footer-bottom"><p>&copy; 2026 (주)두자 DooJa Engineering. All rights reserved. | Revision R13</p></div>
 </div>
 </footer>
 
@@ -1335,16 +1309,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Portfolio Tabs ---
     const pTabBtns = document.querySelectorAll('.portfolio-tab-btn');
     const pItems = document.querySelectorAll('.portfolio-card');
+    const pGrid = document.querySelector('.portfolio-grid');
     function filterPortfolio(filter) {
         pTabBtns.forEach(b => b.classList.toggle('active', b.dataset.pfilter === filter));
+        let visibleCount = 0;
         pItems.forEach(item => {
             if (filter === 'all' || item.dataset.cat === filter) {
                 item.style.display = '';
                 item.style.animation = 'fadeInUp .4s ease-out both';
+                visibleCount++;
             } else {
                 item.style.display = 'none';
             }
         });
+        // If 4 items (like solar/retaining), use balanced 2-column grid on desktop
+        if (pGrid) {
+            if (visibleCount === 4 && window.innerWidth > 960) {
+                pGrid.classList.add('grid-2col');
+            } else {
+                pGrid.classList.remove('grid-2col');
+            }
+        }
     }
 
     pTabBtns.forEach(btn => {
