@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="google-site-verification" content="jMxf14vYxssNPDmm5VRc_Aoss34REUgadu5zhf6UVZI" />
+<meta name="naver-site-verification" content="adf82a2456b68c854cd83826cce485454bf64d2c" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>(주)두자 DooJa | 구조·토목·가시설·태양광 설계 전문 엔지니어링 [R13]</title>
+<meta name="description" content="(주)두자는 철도, 토질 및 기초, 구조, 측량 등 4개 분야 설계 및 건설사업관리에 참여하고 있으며, 설계안전성검토(DFS), 건설현장 가설구조물 안전성 검토 및 태양광 발전에 풍부한 경험과 기술력 확보, 차별화된 서비스로 신뢰할 수 있는 기업입니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* =====================================================
+   (주)두자 DooJa Engineering - Revision R13
+   - 수행실적(Projects) 수행년도(기간) 컬럼 추가 및 연도별 정렬
+   - 작업실적(Portfolio) 딥블루 테크니컬 디자인 & 정돈된 도면 카드
+   - 회사 정확한 네이버 위성 위치도 연동 및 길찾기
+   ===================================================== */
+:root {
+    --orange-500: #F5A623; --orange-600: #E8951A; --orange-700: #D4850F;
+    --orange-400: #F7B84E; --orange-300: #FACB79; --orange-100: #FEF3E0;
+    --navy-950: #050B14; --navy-900: #0A1628; --navy-850: #0D1E36; --navy-800: #0F2548; --navy-700: #163664;
+    --blue-600: #2563EB; --blue-500: #3B82F6; --blue-400: #60A5FA; --blue-300: #93C5FD;
+    --cyan-400: #38BDF8;
+    --gray-900: #0F1419; --gray-800: #1A2332; --gray-700: #2C3E50;
+    --gray-600: #4A5568; --gray-500: #718096; --gray-400: #A0AEC0;
+    --gray-300: #CBD5E0; --gray-200: #E2E8F0; --gray-100: #F7FAFC;
+    --white: #FFFFFF;
+    --bg-section: #F8F9FB;
+    --font-kr: 'Noto Sans KR', sans-serif;
+    --font-en: 'Inter', sans-serif;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+    --shadow-xl: 0 20px 60px rgba(0,0,0,0.18);
+    --radius-sm: 8px; --radius-md: 12px; --radius-lg: 20px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --container: 1200px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--font-kr);color:var(--gray-700);line-height:1.7;background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;height:auto;display:block}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+.container{max-width:var(--container);margin:0 auto;padding:0 24px}
+
+/* --- Utility --- */
+.text-accent{color:var(--orange-500)}
+.text-gradient{background:linear-gradient(135deg,var(--orange-400),var(--orange-500));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+
+/* --- Section Headers --- */
+.section-header{margin-bottom:48px}
+.section-header-center{text-align:center}
+.section-tag{display:inline-block;font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:3px;color:var(--orange-500);text-transform:uppercase;margin-bottom:8px}
+.section-header h2{font-size:clamp(28px,4vw,38px);font-weight:900;color:var(--navy-900);line-height:1.25}
+.section-desc{font-size:16px;color:var(--gray-500);margin-top:12px;max-width:640px}
+.section-header-center .section-desc{margin-left:auto;margin-right:auto}
+
+/* ==================== NAV ==================== */
+#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,22,40,0.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.08);transition:var(--transition)}
+#navbar.scrolled{background:rgba(10,22,40,0.98);box-shadow:var(--shadow-md)}
+.nav-wrap{max-width:var(--container);margin:0 auto;padding:0 24px;height:76px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo img{height:40px;width:auto}
+.nav-menu{display:flex;align-items:center;gap:32px}
+.nav-link{font-size:15px;font-weight:600;color:rgba(255,255,255,0.85);transition:var(--transition);position:relative;padding:6px 0}
+.nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--orange-500);transition:var(--transition);border-radius:2px}
+.nav-link:hover,.nav-link.active{color:var(--orange-400)}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.nav-toggle{display:none;flex-direction:column;gap:5px;padding:8px}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);transition:var(--transition)}
+.nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.nav-toggle.active span:nth-child(2){opacity:0}
+.nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+@media (max-width: 900px){
+    .nav-toggle{display:flex}
+    .nav-menu{position:fixed;top:76px;left:0;right:0;background:rgba(10,22,40,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:32px 24px;gap:20px;transform:translateY(-150%);opacity:0;pointer-events:none;transition:var(--transition);border-bottom:1px solid rgba(255,255,255,0.1)}
+    .nav-menu.active{transform:translateY(0);opacity:1;pointer-events:all}
+    .nav-link{font-size:17px}
+}
+
+/* ==================== HERO ==================== */
+#hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img.hero-static-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;display:none}
+.hero-video-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+#hero.mode-static .hero-bg img.hero-static-img{display:block}
+#hero.mode-static .hero-video-bg{display:none}
+.hero-overlay{position:absolute;inset:0;z-index:2;background:linear-gradient(135deg,rgba(10,22,40,0.88) 0%,rgba(10,22,40,0.65) 50%,rgba(245,166,35,0.15) 100%)}
+.hero-content{position:relative;z-index:3;max-width:var(--container);margin:0 auto;padding:0 24px}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-en);font-size:11px;font-weight:700;letter-spacing:4px;color:var(--orange-400);border:1px solid rgba(245,166,35,0.35);padding:10px 24px;border-radius:100px;margin-bottom:28px;background:rgba(10,22,40,0.6);backdrop-filter:blur(8px);animation:fadeInUp .8s ease-out .2s both}
+.pulse-dot-hero{width:8px;height:8px;background:#00ff80;border-radius:50%;display:inline-block;animation:pulseLive 1.8s infinite}
+@keyframes pulseLive{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.3)}}
+#hero h1{font-size:clamp(36px,6vw,72px);font-weight:900;color:var(--white);line-height:1.15;margin-bottom:24px}
+.hero-line{display:block;animation:fadeInUp .8s ease-out both}
+.hero-line:nth-child(1){animation-delay:.4s}
+.hero-line:nth-child(2){animation-delay:.6s}
+.hero-sub{font-size:clamp(15px,2vw,19px);color:rgba(255,255,255,0.85);line-height:1.8;margin-bottom:40px;max-width:620px;animation:fadeInUp .8s ease-out .8s both}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;animation:fadeInUp .8s ease-out 1s both}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 32px;border-radius:var(--radius-sm);font-size:15px;font-weight:700;transition:var(--transition)}
+.btn-primary{background:linear-gradient(135deg,var(--orange-500),var(--orange-600));color:var(--white);box-shadow:0 4px 15px rgba(245,166,35,0.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(245,166,35,0.45);background:linear-gradient(135deg,var(--orange-400),var(--orange-500))}
+.btn-outline{border:2px solid rgba(255,255,255,0.4);color:var(--white);background:rgba(255,255,255,0.06);backdrop-filter:blur(8px)}
+.btn-outline:hover{background:var(--white);color:var(--navy-900);border-color:var(--white);transform:translateY(-2px)}
+
+/* Hero Indicator & Scroll */
+.hero-video-indicator{position:absolute;bottom:36px;left:48px;z-index:3;display:flex;align-items:center;gap:10px;background:rgba(10,22,40,0.78);backdrop-filter:blur(10px);padding:8px 18px;border-radius:30px;border:1px solid rgba(245,166,35,0.45);box-shadow:0 4px 15px rgba(0,0,0,0.4);animation:fadeInUp .8s ease-out 1.2s both;cursor:pointer;user-select:none;transition:var(--transition)}
+.hero-video-indicator:hover{border-color:var(--orange-400);transform:translateY(-2px);box-shadow:0 6px 20px rgba(245,166,35,0.25)}
+.hero-vid-tag{font-size:12px;font-weight:600;color:#fff;letter-spacing:0.3px}
+.btn-hero-vid-toggle{background:rgba(245,166,35,0.2);border:1px solid rgba(245,166,35,0.4);color:var(--orange-400);font-size:11px;font-weight:700;padding:3px 8px;border-radius:20px;transition:var(--transition)}
+.btn-hero-vid-toggle:hover{background:var(--orange-500);color:#fff}
+.hero-scroll{position:absolute;bottom:36px;right:48px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;animation:fadeInUp .8s ease-out 1.2s both}
+.hero-scroll span{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:3px;color:rgba(255,255,255,0.4);writing-mode:vertical-lr}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--orange-500),transparent);animation:scrollDown 2s infinite}
+@keyframes scrollDown{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.1%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+@media (max-width:768px){
+    .hero-video-indicator{left:20px;bottom:20px;padding:6px 12px}
+    .hero-vid-tag{font-size:11px}
+    .hero-scroll{display:none}
+}
+
+/* ==================== STATS ==================== */
+#stats{background:var(--navy-900);padding:48px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-item{padding:16px}
+.stat-number{font-family:var(--font-en);font-size:clamp(36px,5vw,52px);font-weight:900;color:var(--orange-400);line-height:1;display:inline}
+.stat-unit{font-size:clamp(18px,2.5vw,26px);font-weight:700;color:var(--orange-400);display:inline;margin-left:2px}
+.stat-label{font-size:14px;color:var(--gray-400);margin-top:8px;font-weight:500}
+@media (max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ==================== ABOUT ==================== */
+#about{padding:100px 0;background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-image-wrap{position:relative}
+.about-image{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-xl)}
+.about-image img{width:100%;height:380px;object-fit:cover;transition:var(--transition)}
+.about-image:hover img{transform:scale(1.03)}
+.about-badge-overlay{position:absolute;bottom:16px;left:16px;right:16px;background:rgba(10,22,40,0.85);backdrop-filter:blur(10px);border:1px solid rgba(245,166,35,0.3);border-radius:var(--radius-sm);padding:14px 18px;display:flex;align-items:center;gap:12px;color:var(--white)}
+.about-badge-overlay .badge-icon{font-size:24px}
+.about-badge-overlay strong{display:block;font-size:14px;color:var(--orange-400)}
+.about-badge-overlay span{font-size:12px;color:rgba(255,255,255,0.75)}
+.about-image-subbar{margin-top:12px;padding:10px 16px;background:var(--bg-section);border:1px solid var(--gray-200);border-radius:var(--radius-sm);font-size:12.5px;color:var(--gray-600);line-height:1.5;box-shadow:0 2px 8px rgba(0,0,0,0.03)}
+.about-image-subbar strong{color:var(--navy-800)}
+.about-content h3{font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--navy-900);line-height:1.35;margin-bottom:20px}
+.about-content p{font-size:15px;color:var(--gray-600);margin-bottom:16px;line-height:1.8;word-break:keep-all}
+.about-features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.about-feature{display:flex;align-items:center;gap:12px;padding:14px;background:var(--bg-section);border-radius:var(--radius-sm);border:1px solid var(--gray-200);transition:var(--transition)}
+.about-feature:hover{transform:translateY(-2px);border-color:var(--orange-400);box-shadow:var(--shadow-sm)}
+.feature-icon{width:42px;height:42px;min-width:42px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--orange-500),var(--orange-600));border-radius:var(--radius-sm);color:var(--white)}
+.feature-icon svg{width:20px;height:20px}
+.about-feature strong{display:block;font-size:13.5px;color:var(--navy-900);line-height:1.3}
+.about-feature span{font-size:11.5px;color:var(--gray-500)}
+
+@media (max-width:960px){
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .about-features{grid-template-columns:1fr}
+}
+
+/* ==================== SERVICES ==================== */
+#services{padding:100px 0;background:var(--bg-section)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.service-card{background:var(--white);border-radius:var(--radius-md);padding:36px 28px;border:1px solid var(--gray-200);transition:var(--transition);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--orange-500),var(--orange-400));opacity:0;transition:var(--transition)}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+.service-card:hover::before{opacity:1}
+.service-num{font-family:var(--font-en);font-size:32px;font-weight:900;color:rgba(245,166,35,0.35);line-height:1;margin-bottom:12px}
+.service-card h3{font-size:20px;font-weight:800;color:var(--navy-900);margin-bottom:12px}
+.service-card p{font-size:14px;color:var(--gray-500);line-height:1.7;margin-bottom:20px;word-break:keep-all}
+.service-list{margin-bottom:24px;flex-grow:1}
+.service-list li{font-size:13px;color:var(--gray-600);padding:5px 0 5px 16px;position:relative}
+.service-list li::before{content:'';position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--orange-500)}
+.service-btn{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--orange-600);transition:var(--transition);margin-top:auto}
+.service-btn svg{width:16px;height:16px;transition:var(--transition)}
+.service-btn:hover{color:var(--orange-700)}
+.service-btn:hover svg{transform:translateX(4px)}
+
+@media (max-width:960px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.services-grid{grid-template-columns:1fr}}
+
+/* ==================== PORTFOLIO (REFINED BLUE THEME) ==================== */
+#portfolio{
+    padding: 100px 0;
+    background: radial-gradient(circle at 50% 20%, #0D2447 0%, #08162B 60%, #050E1C 100%);
+    color: var(--white);
+    position: relative;
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+#portfolio .section-header h2{color: var(--white)}
+#portfolio .section-desc{color: var(--blue-300)}
+#portfolio .section-tag{color: var(--orange-400)}
+
+.portfolio-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:44px;flex-wrap:wrap}
+.portfolio-tab-btn{
+    padding: 11px 24px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #CBD5E1;
+    background: rgba(15, 37, 72, 0.7);
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+.portfolio-tab-btn:hover{
+    color: var(--white);
+    border-color: var(--cyan-400);
+    background: rgba(30, 58, 138, 0.8);
+    transform: translateY(-2px);
+}
+.portfolio-tab-btn.active{
+    background: linear-gradient(135deg, var(--orange-500), var(--orange-600));
+    color: var(--white);
+    border-color: var(--orange-400);
+    box-shadow: 0 4px 20px rgba(245, 166, 35, 0.4);
+}
+
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 28px;
+    justify-content: center;
+}
+/* When filtered, cards nicely expand to balanced 2-column or 3-column */
+.portfolio-grid.grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width:960px){
+    .portfolio-grid{grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;}
+}
+@media (max-width:640px){
+    .portfolio-grid{grid-template-columns: 1fr; gap: 16px;}
+}
+
+/* Blue Blueprint Card Style */
+.portfolio-card{
+    background: rgba(13, 30, 54, 0.85);
+    border: 1px solid rgba(59, 130, 246, 0.28);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+}
+.portfolio-card:hover{
+    transform: translateY(-6px);
+    border-color: var(--cyan-400);
+    box-shadow: 0 12px 32px rgba(56, 189, 248, 0.25);
+}
+.portfolio-thumb{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: #040912;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+.portfolio-thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s cubic-bezier(0.25,0.8,0.25,1);
+}
+.portfolio-card:hover .portfolio-thumb img{
+    transform: scale(1.08);
+}
+.portfolio-badge{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #fff;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.badge-tag-temp{background: rgba(13, 148, 136, 0.88); border: 1px solid #2dd4bf}
+.badge-tag-solar{background: rgba(217, 119, 6, 0.88); border: 1px solid #fbbf24}
+.badge-tag-civil{background: rgba(37, 99, 235, 0.88); border: 1px solid #60a5fa}
+.badge-tag-retaining{background: rgba(180, 83, 9, 0.88); border: 1px solid #f59e0b}
+
+.portfolio-zoom-hint{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(10, 22, 40, 0.75);
+    color: #E2E8F0;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.15);
+    opacity: 0;
+    transition: var(--transition);
+}
+.portfolio-card:hover .portfolio-zoom-hint{
+    opacity: 1;
+}
+
+.portfolio-info{
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: linear-gradient(180deg, rgba(15, 34, 62, 0.6) 0%, rgba(10, 22, 40, 0.9) 100%);
+}
+.portfolio-info h3{
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #F8FAFC;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+.portfolio-info p{
+    font-size: 12.5px;
+    color: #94A3B8;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* ==================== PROJECTS TABLE (수행년도 포함) ==================== */
+#projects{padding:100px 0;background:var(--bg-section)}
+.projects-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:36px;flex-wrap:wrap}
+.tab-btn{padding:10px 22px;border-radius:100px;font-size:14px;font-weight:700;color:var(--gray-600);background:var(--white);border:1px solid var(--gray-200);transition:var(--transition)}
+.tab-btn:hover{color:var(--navy-900);border-color:var(--gray-400)}
+.tab-btn.active{background:var(--navy-900);color:var(--white);border-color:var(--navy-900);box-shadow:0 4px 12px rgba(10,22,40,0.2)}
+.table-wrap{background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);overflow-x:auto}
+.projects-table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}
+.projects-table th{background:var(--navy-900);color:var(--white);font-weight:700;padding:16px 20px;font-size:13.5px;letter-spacing:0.5px}
+.projects-table td{padding:16px 20px;border-bottom:1px solid var(--gray-200);color:var(--gray-700)}
+.projects-table tbody tr{transition:background .2s}
+.projects-table tbody tr:hover{background:var(--orange-100)}
+
+.project-year{
+    font-family: var(--font-en);
+    font-weight: 700;
+    color: var(--navy-800);
+    font-size: 13.5px;
+    background: rgba(10, 22, 40, 0.06);
+    padding: 3px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.projects-table .badge{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:100px}
+.badge-temp{background:rgba(13,148,136,0.15);color:#0D9488}
+.badge-solar{background:rgba(245,158,11,0.18);color:#D97706}
+.badge-civil{background:rgba(37,99,235,0.15);color:#1D4ED8}
+.badge-retaining{background:rgba(180,83,9,0.15);color:#B45309}
+.badge-cm{background:rgba(59,130,246,0.12);color:#3B82F6}
+.badge-safety{background:rgba(16,185,129,0.15);color:#10B981}
+
+/* ==================== CERTS & PATENTS ==================== */
+#team{padding:100px 0;background:var(--white)}
+.certs-showcase-grid{display:grid;grid-template-columns:1fr;gap:36px}
+.team-card{background:var(--white);border-radius:var(--radius-lg);padding:36px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200)}
+.team-card-header{margin-bottom:24px}
+.team-card-header h3{font-size:20px;font-weight:800;color:var(--navy-900);display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.team-card-header h3 .icon-badge{width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--orange-500),var(--orange-600));border-radius:var(--radius-sm);color:var(--white);flex-shrink:0}
+.team-card-desc{font-size:13px;color:var(--gray-500);display:flex;align-items:center;gap:6px}
+.team-card-desc svg{width:14px;height:14px;color:var(--orange-500);flex-shrink:0}
+
+.cert-grid-2col{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:860px){.cert-grid-2col{grid-template-columns:1fr}}
+
+.cert-item{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--bg-section);border-radius:var(--radius-md);border:1px solid var(--gray-200);cursor:pointer;transition:var(--transition);gap:12px;min-width:0}
+.cert-item:hover{background:var(--white);border-color:var(--navy-800);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.cert-item-main{display:flex;align-items:center;gap:12px;min-width:0;flex:1}
+.cert-item-main strong{font-size:14px;font-weight:700;color:var(--navy-900);word-break:keep-all;line-height:1.35;display:block}
+.cert-item-main span{font-size:12px;color:var(--gray-500);word-break:keep-all;margin-top:2px;display:block}
+.cert-icon{width:44px;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;text-align:center;line-height:1.15;color:var(--white);flex-shrink:0}
+.cert-icon.iso{background:linear-gradient(135deg,#0d9488,#14b8a6)}
+.cert-icon.reg{background:linear-gradient(135deg,var(--orange-500),var(--orange-600))}
+.cert-icon.patent{background:linear-gradient(135deg,#1e3a8a,#2563eb)}
+.cert-icon.design{background:linear-gradient(135deg,#b45309,#f59e0b)}
+
+.cert-view-badge{font-size:11.5px;font-weight:600;color:var(--orange-600);background:rgba(245,166,35,0.12);padding:5px 10px;border-radius:20px;white-space:nowrap;flex-shrink:0;transition:var(--transition)}
+.cert-item:hover .cert-view-badge,.patent-item:hover .cert-view-badge{background:var(--orange-500);color:#fff}
+
+.patent-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+@media (max-width:860px){.patent-grid{grid-template-columns:1fr}}
+.patent-item{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--bg-section);border-radius:var(--radius-md);border:1px solid var(--gray-200);cursor:pointer;transition:var(--transition);gap:14px;min-width:0}
+.patent-item:hover{background:var(--white);border-color:#2563eb;transform:translateY(-2px);box-shadow:0 4px 12px rgba(37,99,235,0.12)}
+.patent-item-main{display:flex;align-items:center;gap:12px;min-width:0;flex:1}
+.patent-item-main strong{font-size:14px;font-weight:700;color:var(--navy-900);word-break:keep-all;line-height:1.35;display:block}
+.patent-item-main span{font-size:12px;color:var(--gray-500);word-break:keep-all;margin-top:2px;display:block}
+
+.team-card-actions{margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-cert-all{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:var(--radius-sm);font-size:13px;font-weight:700;background:var(--bg-section);border:1px solid var(--gray-300);color:var(--gray-700);transition:var(--transition)}
+.btn-cert-all:hover{background:var(--navy-900);color:var(--white);border-color:var(--navy-900);transform:translateY(-2px)}
+
+/* ==================== CONTACT (정확한 네이버 항공/위성 위치도 연동) ==================== */
+#contact{padding:100px 0;background:var(--bg-section)}
+.contact-layout{display:grid;grid-template-columns:1fr 1.35fr;gap:36px;align-items:stretch}
+.contact-info-card{background:var(--white);border-radius:var(--radius-lg);padding:40px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);display:flex;flex-direction:column;gap:24px}
+.contact-info-header{margin-bottom:8px}
+.contact-info-header h3{font-size:22px;font-weight:800;color:var(--navy-900);margin-bottom:6px}
+.contact-info-header p{font-size:14px;color:var(--gray-500)}
+
+.contact-item{display:flex;gap:16px;align-items:flex-start}
+.contact-icon{width:44px;height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--orange-500),var(--orange-600));border-radius:var(--radius-sm);color:var(--white)}
+.contact-icon svg{width:20px;height:20px}
+.contact-item strong{display:block;font-size:14px;color:var(--navy-900);margin-bottom:2px}
+.contact-item p{font-size:14.5px;color:var(--gray-600);line-height:1.5;word-break:keep-all}
+
+.traffic-guide{margin-top:10px;padding:20px;background:var(--bg-section);border-radius:var(--radius-md);border:1px solid var(--gray-200)}
+.traffic-guide h4{font-size:14px;font-weight:800;color:var(--navy-900);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.traffic-list{display:flex;flex-direction:column;gap:10px}
+.traffic-list li{font-size:13px;color:var(--gray-600);display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+.traffic-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;color:#fff;flex-shrink:0}
+.tag-subway{background:#5c5c99}
+.tag-bus{background:#2563eb}
+.tag-car{background:#059669}
+
+/* Exact Map Card */
+.contact-map-card{background:var(--white);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);display:flex;flex-direction:column}
+.map-container{
+    width: 100%;
+    height: 380px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--gray-300);
+    position: relative;
+    background: #0D1E36;
+    cursor: pointer;
+}
+.map-container img.naver-map-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .4s ease;
+}
+.map-container:hover img.naver-map-img{
+    transform: scale(1.03);
+}
+.map-overlay-badge{
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(10, 22, 40, 0.88);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(245, 166, 35, 0.4);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.map-overlay-badge strong{display:block;font-size:13px;color:var(--orange-400)}
+.map-overlay-badge span{font-size:11.5px;color:rgba(255,255,255,0.75)}
+
+.map-actions{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.btn-map-link{flex:1;min-width:140px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:var(--radius-sm);font-size:13.5px;font-weight:700;transition:var(--transition);text-align:center}
+.btn-naver{background:#03C75A;color:#FFFFFF}
+.btn-naver:hover{background:#02b350;transform:translateY(-2px);box-shadow:0 4px 12px rgba(3,199,90,0.35)}
+.btn-kakao{background:#FEE500;color:#191919}
+.btn-kakao:hover{background:#FADA0A;transform:translateY(-2px);box-shadow:0 4px 12px rgba(250,218,10,0.4)}
+
+@media (max-width:960px){
+    .contact-layout{grid-template-columns:1fr}
+    .map-container{height:300px}
+}
+
+/* ==================== FOOTER ==================== */
+#footer{background:var(--navy-900);color:rgba(255,255,255,0.7);padding:60px 0 30px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px;margin-bottom:40px}
+.footer-brand .footer-logo{height:36px;width:auto;margin-bottom:16px}
+.footer-brand p{font-size:13.5px;line-height:1.6}
+.footer-links h4,.footer-contact h4{font-size:14px;font-weight:700;color:var(--white);margin-bottom:16px}
+.footer-links ul li{margin-bottom:8px}
+.footer-links ul li a{font-size:13px;color:rgba(255,255,255,0.65);transition:var(--transition)}
+.footer-links ul li a:hover{color:var(--orange-400)}
+.footer-contact p{font-size:13px;margin-bottom:6px;line-height:1.5}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;text-align:center;font-size:12.5px;color:rgba(255,255,255,0.4)}
+
+@media (max-width:960px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.footer-grid{grid-template-columns:1fr}}
+
+/* ==================== LIGHTBOX MODAL ==================== */
+.lightbox{position:fixed;inset:0;background:rgba(10,22,40,0.92);backdrop-filter:blur(16px);z-index:2000;display:none;align-items:center;justify-content:center;padding:24px}
+.lightbox.active{display:flex;animation:fadeIn .3s ease-out}
+.lightbox-wrap{position:relative;max-width:900px;width:100%;max-height:90vh;background:var(--navy-800);border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:var(--shadow-xl);display:flex;flex-direction:column}
+.lightbox-close{position:absolute;top:16px;right:16px;z-index:10;width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,0.6);color:var(--white);font-size:24px;display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+.lightbox-close:hover{background:var(--orange-500)}
+#lightboxImg{max-height:70vh;width:100%;object-fit:contain;background:#050d18}
+.lightbox-caption{padding:20px 28px;background:var(--navy-800);color:var(--white)}
+.lightbox-caption h3{font-size:17px;font-weight:700;color:var(--orange-400);margin-bottom:4px}
+.lightbox-caption p{font-size:13px;color:rgba(255,255,255,0.75)}
+
+/* Back to Top */
+#backToTop{position:fixed;bottom:32px;right:32px;width:46px;height:46px;background:var(--orange-500);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);opacity:0;pointer-events:none;transition:var(--transition);z-index:900}
+#backToTop.visible{opacity:1;pointer-events:all}
+#backToTop:hover{background:var(--orange-600);transform:translateY(-3px)}
+#backToTop svg{width:20px;height:20px}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+<div class="nav-wrap">
+<a href="#hero" class="nav-logo"><img src="img/logo.png" alt="(주)두자 로고"></a>
+<ul class="nav-menu" id="navMenu">
+<li><a href="#about" class="nav-link">회사소개</a></li>
+<li><a href="#services" class="nav-link">업무분야</a></li>
+<li><a href="#portfolio" class="nav-link">작업실적</a></li>
+<li><a href="#projects" class="nav-link">수행실적</a></li>
+<li><a href="#team" class="nav-link">인증·특허</a></li>
+<li><a href="#contact" class="nav-link">오시는 길</a></li>
+</ul>
+<button class="nav-toggle" id="navToggle" aria-label="메뉴"><span></span><span></span><span></span></button>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" title="화면을 클릭하면 맨 처음에 만들었던 정지화면과 동영상이 상호 전환됩니다">
+<div class="hero-bg" id="heroBg">
+<img src="img/hero_bg.jpg" alt="건설엔지니어링 구조 현장" class="hero-static-img" id="heroStaticImg">
+<video class="hero-video-bg" id="heroVideoBg" autoplay muted loop playsinline poster="img/hero_video_poster.jpg">
+<source src="video/hero_retaining_loop.mp4" type="video/mp4">
+<img src="img/hero_video_poster.jpg" alt="가시설 시공 현장">
+</video>
+</div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="hero-badge"><span class="pulse-dot-hero" id="heroPulseDot"></span> LIVE CATHODIC & TEMPORARY WORKS · STRUCTURAL CIVIL ENGINEERING</div>
+<h1>
+<span class="hero-line">구조와 안전을</span>
+<span class="hero-line text-gradient">설계합니다</span>
+</h1>
+<p class="hero-sub">철도·교량·터널·산업플랜트·가설구조물 —<br>(주)두자는 사회기반시설의 구조설계와 안전성검토를 수행하는 건설엔지니어링 전문기업입니다.</p>
+<div class="hero-actions">
+<a href="#services" class="btn btn-primary">업무분야 보기</a>
+<a href="#portfolio" class="btn btn-outline">작업실적 보기</a>
+</div>
+</div>
+<!-- 배경 전환 인디케이터 -->
+<div class="hero-video-indicator" onclick="toggleHeroVideoMode()" title="클릭하여 동영상 ⇄ 맨 처음 정지화면 모드 전환">
+<span class="pulse-dot-hero"></span>
+<span class="hero-vid-tag" id="heroVidTagText">🎥 흙막이 가시설 시공 동영상 (화면 클릭 시 정지화면 전환)</span>
+<button type="button" class="btn-hero-vid-toggle" id="heroToggleBtn" title="화면 모드 전환">⏸️ 정지화면</button>
+</div>
+<div class="hero-scroll"><span>SCROLL</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+<div class="container">
+<div class="stats-grid">
+<div class="stat-item"><div class="stat-number" data-count="200">0</div><div class="stat-unit">건+</div><div class="stat-label">설계 및 검토 수행실적</div></div>
+<div class="stat-item"><div class="stat-number" data-count="100">0</div><div class="stat-unit">건/월</div><div class="stat-label">가설구조물 구조해석</div></div>
+<div class="stat-item"><div class="stat-number" data-count="15">0</div><div class="stat-unit">건+</div><div class="stat-label">특허 및 공인인증 보유</div></div>
+<div class="stat-item"><div class="stat-number" data-count="100">0</div><div class="stat-unit">%</div><div class="stat-label">품질보증 및 안전설계</div></div>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<div class="section-header"><span class="section-tag">ABOUT US</span><h2>회사소개</h2></div>
+<div class="about-grid">
+<div class="about-image-wrap">
+<div class="about-image">
+<img src="img/about_design_meeting.jpg" alt="(주)두자 기술진 구조설계 도면 검토 및 3D 구조해석 협업 회의">
+<div class="about-badge-overlay">
+<span class="badge-icon">🏛️</span>
+<div><strong>전문 기술진 협업</strong><span>구조계산 & 3D 최적설계</span></div>
+</div>
+</div>
+<div class="about-image-subbar">
+<span>💡 <strong>(주)두자 기술진 설계회의</strong>: 구조·토목·가시설 엔지니어의 도면 정밀 검토 및 3D 유한요소(FEA) 구조해석 협업</span>
+</div>
+</div>
+
+<div class="about-content">
+<h3>신뢰할 수 있는<br><span class="text-accent">새로운 기업</span></h3>
+<p>(주)두자는 <strong>철도, 토질 및 기초, 구조, 측량</strong> 등 4개 분야 설계 및 건설사업관리에 참여하고 있으며, <strong>설계안전성검토(DFS)</strong>, 건설현장 가설구조물 안전성 검토 및 태양광 발전에 풍부한 경험과 기술력 확보, 차별화된 서비스로 신뢰할 수 있는 기업입니다.</p>
+<p>프로젝트를 수행함에 있어 각 분야 전문인의 기술력을 바탕으로 품질이 보증된 성과품으로, 신뢰할 수 있는 서비스를 제공하는 기업입니다.</p>
+<div class="about-features">
+<div class="about-feature">
+<div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<div><strong>안전성 최우선</strong><span>DFS 설계안전성검토 전문</span></div>
+</div>
+<div class="about-feature">
+<div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+<div><strong>독자적 특허보유</strong><span>가설방음벽·비개착 공법</span></div>
+</div>
+<div class="about-feature">
+<div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div>
+<div><strong>ISO 3종 인증</strong><span>품질·환경·안전보건 경영</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SERVICES (업무분야: 1번 가설구조물, 2번 태양광) -->
+<section id="services">
+<div class="container">
+<div class="section-header section-header-center"><span class="section-tag">SERVICES</span><h2>업무분야</h2><p class="section-desc">가설구조물부터 태양광, 토목구조, 흙막이, 철도 및 도로까지 5대 핵심 엔지니어링 서비스를 제공합니다.</p></div>
+<div class="services-grid">
+
+<!-- 01. 가설구조물 분야 -->
+<div class="service-card">
+<div class="service-num">01</div>
+<h3>가설구조물 분야</h3>
+<p>시공 중 위험요소를 사전에 도출·제거하는 6대 가설엔지니어링 안전성 검토 및 가설구조 해석</p>
+<ul class="service-list"><li>가설울타리(EGI휀스/RPP휀스) 풍하중 및 지지구조 검토</li><li>벽체·기둥 거푸집(유로폼, 원형폼, 코핑폼) 측압 검토</li><li>시스템 동바리(H=5m 이상) 전산 구조해석</li><li>시스템 비계(강관비계/쌍줄비계) 벽이음 및 작업발판</li><li>터널 라이닝폼 및 특수 시공용 작업대차 3D 구조해석</li></ul>
+<a href="#portfolio" class="service-btn" data-filter="temp"><span>작업실적 보기</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+</div>
+
+<!-- 02. 태양광 발전 분야 -->
+<div class="service-card">
+<div class="service-num">02</div>
+<h3>태양광 발전 분야</h3>
+<p>지상형·지붕형·수상형 태양광 발전시설의 구조안전성 검토 및 3차원 입체해석</p>
+<ul class="service-list"><li>태양광 구조물 3D 입체해석 (MIDAS GEN, SAP2000)</li><li>풍하중·적설하중·지진하중 종합 구조검토</li><li>지반 지지력 및 기초(독립기초/말뚝) 안정성 평가</li><li>기존 건축물 지붕형 증설에 따른 구조내력 평가</li></ul>
+<a href="#portfolio" class="service-btn" data-filter="solar"><span>작업실적 보기</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+</div>
+
+<!-- 03. 토목구조 분야 -->
+<div class="service-card">
+<div class="service-num">03</div>
+<h3>토목구조 분야</h3>
+<p>교량, 지하철 정거장, 터널, 지하차도, BOX, 옹벽 등 토목구조물의 기본·실시설계 및 구조해석</p>
+<ul class="service-list"><li>교량·지하철·개착BOX·옹벽 구조설계</li><li>구조계산서 작성 (건기법 제48조)</li><li>보강토 및 절토부패널옹벽 특화설계</li><li>산업플랜트 및 콘크리트 구조물 해석</li></ul>
+<a href="#portfolio" class="service-btn" data-filter="civil"><span>작업실적 보기</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+</div>
+
+<!-- 04. 흙막이 가시설 분야 -->
+<div class="service-card">
+<div class="service-num">04</div>
+<h3>흙막이 가시설 분야</h3>
+<p>도심지 지하굴착에 따른 흙막이벽체, 버팀보(스트럿)·어스앵커, 지반 사면안정 및 연약지반 해석</p>
+<ul class="service-list"><li>지하굴착 흙막이 가시설 설계 (H-Pile+토류판, CIP, SCW)</li><li>버팀보·어스앵커·레이커 지지구조 해석 (SUNEX, GEO XD)</li><li>사면안정 해석 및 연약지반 개량설계</li><li>인접구조물 영향성 검토 및 지중매설물 매달기 설계</li></ul>
+<a href="#portfolio" class="service-btn" data-filter="retaining"><span>작업실적 보기</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+</div>
+
+<!-- 05. 철도 및 도로 분야 -->
+<div class="service-card">
+<div class="service-num">05</div>
+<h3>철도 및 도로 분야</h3>
+<p>고속철도, 광역철도(GTX), 도시철도 및 고속도로·일반국도의 노반·선형·구조물 설계</p>
+<ul class="service-list"><li>철도 노반 및 특수교량 실시설계</li><li>고속도로 및 간선도로 설계·선형계획</li><li>지하철 정거장 환승체계 구조계획</li><li>철도보호지구 인접공사 안전영향평가</li></ul>
+<a href="#projects" class="service-btn" data-filter="cm"><span>수행실적 보기</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PORTFOLIO (작업실적: 딥블루 테크니컬 디자인 & 정돈된 도면 카드) -->
+<section id="portfolio">
+<div class="container">
+<div class="section-header section-header-center">
+<span class="section-tag">TECHNICAL PORTFOLIO</span>
+<h2>작업실적</h2>
+<p class="section-desc">가설구조물, 태양광 발전 및 토목·가시설 분야의 도면 및 구조해석 실무 성과품입니다.</p>
+</div>
+
+<div class="portfolio-tabs">
+<button type="button" class="portfolio-tab-btn active" data-pfilter="all">전체보기</button>
+<button type="button" class="portfolio-tab-btn" data-pfilter="temp">가설구조물</button>
+<button type="button" class="portfolio-tab-btn" data-pfilter="solar">태양광 발전</button>
+<button type="button" class="portfolio-tab-btn" data-pfilter="civil">토목구조</button>
+<button type="button" class="portfolio-tab-btn" data-pfilter="retaining">흙막이 가시설</button>
+</div>
+
+<div class="portfolio-grid">
+
+<!-- 1. 가설구조물 6대 분류 실적 -->
+<div class="portfolio-card" data-cat="temp" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/temp_fence_angi.jpg" alt="안기복개천 가설울타리 구조검토 도면">
+<span class="portfolio-badge badge-tag-temp">가설울타리</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>안기복개천 생태하천 가설울타리</h3>
+<p>가설 EGI휀스 풍하중 및 지주 지반 지지력 구조검토</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="temp" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/formwork_bio.jpg" alt="바이오가스화 벽체거푸집 구조검토 도면">
+<span class="portfolio-badge badge-tag-temp">거푸집</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>당진축산 바이오 액비저장조 거푸집</h3>
+<p>콘크리트 측압 검토 및 유로폼·긴결재 구조안전성 해석</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="temp" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/scaffold_asan.jpg" alt="아산모종샛들 시스템동바리 전산해석">
+<span class="portfolio-badge badge-tag-temp">동바리</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>아산모종샛들 도시개발 저류조 동바리</h3>
+<p>저류조 H=4.05m 시스템 동바리 MIDAS CIVIL 전산해석</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="temp" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/scaffold_gimpo.jpg" alt="김포공항 시스템비계 구조검토 도면">
+<span class="portfolio-badge badge-tag-temp">비계</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>김포공항 국제선 및 격납고 시스템비계</h3>
+<p>국제선 외벽 방수공사용 시스템비계 풍하중·작업발판 해석</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="temp" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/tunnel_cart_pohang.jpg" alt="죽장터널 작업대차 3D 구조해석">
+<span class="portfolio-badge badge-tag-temp">터널작업대차</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>포항~안동 국도 죽장터널 작업대차</h3>
+<p>터널 전단면 시공용 특수 작업대차 정면·측면 3D 구조해석</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="temp" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/tunnel_lining.jpg" alt="터널 라이닝폼 3D 모델링">
+<span class="portfolio-badge badge-tag-temp">터널라이닝폼</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>터널 라이닝폼 · 대형 거푸집</h3>
+<p>터널 라이닝폼 현장 설치 및 3D 입체 구조모델링</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="temp" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/formwork_scaffold.jpg" alt="거푸집 및 시스템 동바리 구조해석">
+<span class="portfolio-badge badge-tag-temp">가설구조물</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>거푸집 및 시스템 동바리 · 비계</h3>
+<p>정거장 구조물 동바리 구조해석 (MIDAS CIVIL)</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="temp" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/walking_tower.jpg" alt="가설 워킹타워 승강로 구조검토">
+<span class="portfolio-badge badge-tag-temp">워킹타워</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>가설 워킹타워 · 가설통로 안전검토</h3>
+<p>현장 작업자 가설계단 통로 구조안전성 및 전도방지 해석</p>
+</div>
+</div>
+
+<!-- 2. 태양광 발전 분야 실적 -->
+<div class="portfolio-card" data-cat="solar" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/solar_samji2.jpg" alt="경주 삼지2호 태양광 발전소 도면">
+<span class="portfolio-badge badge-tag-solar">태양광 발전</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>경주 삼지2호 태양광 발전소 구조설계</h3>
+<p>지상형 태양광 지반조사 연계, 내진설계 및 풍하중 3D 구조해석</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="solar" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/solar_samgye.jpg" alt="평택 삼계리 태양광 발전소 표준 구조계산서">
+<span class="portfolio-badge badge-tag-solar">태양광 발전</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>평택 삼계리 태양광 발전소 표준 구조계산서</h3>
+<p>두자 자체 표준양식 구조계산서 및 풍속 30m/s 안전성 검토</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="solar" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/solar_shinsung.jpg" alt="신세계6호 태양광 모듈 및 기초 상세도">
+<span class="portfolio-badge badge-tag-solar">상세설계</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>신세계6호 태양광 모듈 및 기초 상세도</h3>
+<p>경사각 13° 최적 배치, 포스맥(PosMAC) 강재 적용 상세설계</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="solar" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/solar_structure.jpg" alt="태양광 구조물 3D 구조해석">
+<span class="portfolio-badge badge-tag-solar">구조해석</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>대용량 태양광 발전시설 구조안전검토</h3>
+<p>풍하중·적설하중 종합 해석 및 부재별 응력비 평가</p>
+</div>
+</div>
+
+<!-- 3. 토목구조 분야 실적 -->
+<div class="portfolio-card" data-cat="civil" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/civil_wolpan6_structure.jpg" alt="월판6공구 구조물 설계 도면">
+<span class="portfolio-badge badge-tag-civil">토목구조</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>월곶~판교 제6공구 정거장 및 본선구조물</h3>
+<p>지하철 정거장 본체BOX, 환기구 및 개착터널 실시설계 일식</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="civil" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/civil_station_structure.jpg" alt="지하정거장 및 환기구 구조해석 모델">
+<span class="portfolio-badge badge-tag-civil">전산해석</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>도심지 지하철 지하구조물 전산해석</h3>
+<p>정거장 지하 연속 BOX 구조해석 (SAP2000, MIDAS CIVIL)</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="civil" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/civil_major_projects.jpg" alt="철도 및 토목구조물 설계실적 도면">
+<span class="portfolio-badge badge-tag-civil">철도인프라</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>철도 인프라 및 교량·옹벽 설계</h3>
+<p>월판9공구, 월판10공구, 동북선 등 대형 철도 인프라 구조설계</p>
+</div>
+</div>
+
+<!-- 4. 흙막이 가시설 분야 실적 -->
+<div class="portfolio-card" data-cat="retaining" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/retaining_wolpan6_detail.jpg" alt="월판6공구 가시설 상세도">
+<span class="portfolio-badge badge-tag-retaining">흙막이가시설</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>월곶~판교 환승센터 가시설 상세도</h3>
+<p>도심지 굴착 H-Pile+토류판, 버팀보(스트럿) 및 띠장 상세도</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="retaining" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/retaining_page26.jpg" alt="흙막이 가시설 구조검토서">
+<span class="portfolio-badge badge-tag-retaining">구조검토서</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>흙막이 가시설 및 공중비계 구조해석</h3>
+<p>지하 굴착 벽체 변위 및 배면 지반 안정성 해석</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="retaining" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/temp_structure.jpg" alt="가설휀스 및 흙막이 도면">
+<span class="portfolio-badge badge-tag-retaining">지중매달기</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>지하굴착 가시설 · 지중매설물 매달기</h3>
+<p>전력구 및 하수BOX 매달기 방호공법 구조안전성 검토</p>
+</div>
+</div>
+
+<div class="portfolio-card" data-cat="retaining" onclick="openLightbox(this)">
+<div class="portfolio-thumb">
+<img src="img/portfolio/slab_demolition.jpg" alt="신안산선 중간말뚝 보강 구조검토">
+<span class="portfolio-badge badge-tag-retaining">슬래브보강</span>
+<span class="portfolio-zoom-hint">도면확대 🔍</span>
+</div>
+<div class="portfolio-info">
+<h3>신안산선 가시설 중간말뚝 절단구간 보강</h3>
+<p>철도 가시설 중간말뚝 절단구간 보강 및 슬래브 안전성 검토</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS TABLE (수행실적: 수행년도 포함) -->
+<section id="projects">
+<div class="container">
+<div class="section-header section-header-center">
+<span class="section-tag">PROJECT TRACK RECORD</span>
+<h2>주요 수행실적</h2>
+<p class="section-desc">공공 인프라부터 민간 프로젝트까지, 두자가 축적해 온 분야별 대표 실적입니다.</p>
+</div>
+
+<div class="projects-tabs">
+<button class="tab-btn active" data-tab="all">전체 실적</button>
+<button class="tab-btn" data-tab="temp">가설구조물</button>
+<button class="tab-btn" data-tab="solar">태양광</button>
+<button class="tab-btn" data-tab="civil">토목구조</button>
+<button class="tab-btn" data-tab="retaining">흙막이 가시설</button>
+<button class="tab-btn" data-tab="cm">CM / 감리</button>
+</div>
+
+<div class="table-wrap">
+<table class="projects-table">
+<thead>
+<tr>
+<th style="width:12%">수행년도</th>
+<th style="width:25%">프로젝트명</th>
+<th style="width:35%">수행 내용</th>
+<th style="width:16%">발주처 / 원도급사</th>
+<th style="width:12%">분야</th>
+</tr>
+</thead>
+<tbody>
+<!-- 1. 가설구조물 -->
+<tr data-cat="temp"><td><span class="project-year">2026</span></td><td>안기복개천 생태하천 복원사업</td><td>가설 EGI울타리(휀스) 풍하중 및 지주 지반구조검토</td><td>안동시</td><td><span class="badge badge-temp">가설울타리</span></td></tr>
+<tr data-cat="temp"><td><span class="project-year">2025</span></td><td>당진축산 바이오가스화 공공처리시설</td><td>액비저장조 벽체 거푸집(유로폼) 측압 및 전도방지 검토</td><td>당진축산농협</td><td><span class="badge badge-temp">거푸집</span></td></tr>
+<tr data-cat="temp"><td><span class="project-year">2025</span></td><td>아산모종샛들지구 도시개발사업</td><td>저류조 구조물 H=4.05m 시스템 동바리 MIDAS 해석</td><td>아산시</td><td><span class="badge badge-temp">동바리</span></td></tr>
+<tr data-cat="temp"><td><span class="project-year">2024</span></td><td>김포공항 국제선 및 기타건물</td><td>공항 청사 외벽 방수공사용 시스템 비계 풍하중 검토</td><td>한국공항공사</td><td><span class="badge badge-temp">비계</span></td></tr>
+<tr data-cat="temp"><td><span class="project-year">2024</span></td><td>포항~안동1-1 국도건설공사 (죽장터널)</td><td>터널 전단면 시공용 특수 작업대차 3D 전산구조해석</td><td>국토교통부</td><td><span class="badge badge-temp">터널작업대차</span></td></tr>
+<tr data-cat="temp"><td><span class="project-year">2023</span></td><td>김포~파주 5공구 한강횡단도로</td><td>문산천교 코핑폼 및 위전철교 거푸집 구조안전성 검토</td><td>현대건설</td><td><span class="badge badge-temp">코핑폼</span></td></tr>
+
+<!-- 2. 태양광 발전 -->
+<tr data-cat="solar"><td><span class="project-year">2026</span></td><td>경주 삼지2호 태양광 발전소</td><td>지상형 태양광 구조설계, 내진검토 및 지반조사 연계</td><td>경북 경주시</td><td><span class="badge badge-solar">태양광</span></td></tr>
+<tr data-cat="solar"><td><span class="project-year">2025</span></td><td>평택 삼계리 283-1 태양광발전소</td><td>두자 표준양식 구조계산서 및 풍속 30m/s 3D 해석</td><td>경기 평택시</td><td><span class="badge badge-solar">태양광</span></td></tr>
+<tr data-cat="solar"><td><span class="project-year">2024</span></td><td>신세계6호 태양광 발전시설</td><td>경사각 13° 모듈 측면도 및 포스맥(PosMAC) 상세설계</td><td>후광일렉트릭 협력</td><td><span class="badge badge-solar">태양광</span></td></tr>
+
+<!-- 3. 토목구조 -->
+<tr data-cat="civil"><td><span class="project-year">2026</span></td><td>동호대교 노후 방음벽 정비</td><td>노후 방음벽 정비 디자인 및 구조안전성 실시설계</td><td>서울특별시</td><td><span class="badge badge-civil">토목구조</span></td></tr>
+<tr data-cat="civil"><td><span class="project-year">2025~26</span></td><td>월곶~판교 복선전철 10공구</td><td>서판교정거장 지하구조물 및 개착BOX 실시설계</td><td>서현기술단 외주</td><td><span class="badge badge-civil">토목구조</span></td></tr>
+<tr data-cat="civil"><td><span class="project-year">2024~25</span></td><td>월곶~판교 복선전철 9공구</td><td>본선 및 정거장 철도구조물 실시설계 일식</td><td>서현기술단 외주</td><td><span class="badge badge-civil">토목구조</span></td></tr>
+<tr data-cat="civil"><td><span class="project-year">2024</span></td><td>동북선 도시철도 인접구조물</td><td>지하 인접구조물 거동 및 안정성 정밀 특화해석</td><td>동명기술공단 / 학회</td><td><span class="badge badge-civil">토목구조</span></td></tr>
+<tr data-cat="civil"><td><span class="project-year">2023~24</span></td><td>평택 CO2포집 액상화공장</td><td>산업플랜트 기반시설 및 토목구조물 실시설계</td><td>현대건설</td><td><span class="badge badge-civil">토목구조</span></td></tr>
+<tr data-cat="civil"><td><span class="project-year">2023</span></td><td>인제 바이오 시설 및 산책로</td><td>기반시설 토목구조물 및 교량·산책로 실시설계</td><td>현대건설 / 인제군</td><td><span class="badge badge-civil">토목구조</span></td></tr>
+
+<!-- 4. 흙막이 가시설 -->
+<tr data-cat="retaining"><td><span class="project-year">2026</span></td><td>서판교정거장 가시설 및 지중관로 매달기</td><td>토류판·어스앵커 가시설 및 전력구/하수BOX 매달기 계획</td><td>국가철도공단</td><td><span class="badge badge-retaining">흙막이가시설</span></td></tr>
+<tr data-cat="retaining"><td><span class="project-year">2025</span></td><td>월곶~판교 10공구 가시설 변경설계</td><td>도심지 지하정거장 흙막이벽체 및 버팀보 변경설계</td><td>계룡건설(시공사)</td><td><span class="badge badge-retaining">흙막이가시설</span></td></tr>
+<tr data-cat="retaining"><td><span class="project-year">2024</span></td><td>신안산선 복선전철(포스코)</td><td>가시설 중간말뚝 절단구간 보강 및 슬래브 안전성 검토</td><td>포스코이앤씨</td><td><span class="badge badge-retaining">흙막이가시설</span></td></tr>
+<tr data-cat="retaining"><td><span class="project-year">2024</span></td><td>판교 ex-HUB 외동교 가시설</td><td>경부고속도로 하부 굴착에 따른 가시설 및 지반안정성</td><td>한국도로공사</td><td><span class="badge badge-retaining">흙막이가시설</span></td></tr>
+<tr data-cat="retaining"><td><span class="project-year">2023</span></td><td>군포지역 전기공급시설 전력구</td><td>도심지 수직구 및 지중화 개착 가시설 구조검토</td><td>한국전력공사</td><td><span class="badge badge-retaining">흙막이가시설</span></td></tr>
+
+<!-- 5. 건설사업관리 / 안전 -->
+<tr data-cat="cm"><td><span class="project-year">2025~26</span></td><td>GTX-C노선 민간투자사업 제5공구</td><td>철도 인프라 전 공정 건설사업관리(감리) 용역</td><td>국가철도공단</td><td><span class="badge badge-cm">CM</span></td></tr>
+<tr data-cat="cm"><td><span class="project-year">2024</span></td><td>마포3구역 도시정비사업</td><td>정비사업 토목기반시설 건설사업관리</td><td>마포구청 / 정비조합</td><td><span class="badge badge-cm">CM</span></td></tr>
+<tr data-cat="cm"><td><span class="project-year">2023~24</span></td><td>김포~파주 2공구 외 3개 공구</td><td>도로건설 현장 가설구조물 안전성검토(DFS) 및 변경설계</td><td>시공사</td><td><span class="badge badge-safety">안전검토</span></td></tr>
+<tr data-cat="cm"><td><span class="project-year">2023</span></td><td>함안~창녕 12공구 / 세종~포천 5공구</td><td>고속도로 현장 가설물 안전성검토 및 안전관리용역</td><td>한국도로공사 / 시공사</td><td><span class="badge badge-safety">안전검토</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- CERTS & PATENTS (공인 인증 및 특허 기술 현황) -->
+<section id="team">
+<div class="container">
+<div class="section-header section-header-center">
+<span class="section-tag">CERTIFICATES & PATENTS</span>
+<h2>공인인증 · 특허기술</h2>
+<p class="section-desc">공인 등록 및 국제인증 시스템, 독자적 특허 및 디자인 지식재산권을 바탕으로 최고의 기술력과 신뢰를 보증합니다.</p>
+</div>
+
+<div class="certs-showcase-grid">
+
+<!-- 1. 공인 인증 및 인허가 (5개 공식 등록/인증서) -->
+<div class="team-card">
+<div class="team-card-header">
+<h3><span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>공인 인증 및 인허가</h3>
+<p class="team-card-desc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>인증 항목을 클릭하시면 공식 인증서 및 등록증 원본을 확인하실 수 있습니다.</p>
+</div>
+<div class="cert-grid-2col">
+<div class="cert-item" onclick="openCertModal('img/certs/cert_iso_9001.jpg', 'ISO 9001 품질경영시스템 인증서', '건설엔지니어링(설계, 사업관리, 안전진단) 품질경영시스템 국제인증')">
+<div class="cert-item-main"><div class="cert-icon iso">ISO<br>9001</div><div><strong>품질경영시스템 (ISO 9001)</strong><span>건설엔지니어링 설계·CM 국제표준 품질인증</span></div></div>
+<span class="cert-view-badge">인증서 보기 🔍</span>
+</div>
+<div class="cert-item" onclick="openCertModal('img/certs/cert_iso_14001.jpg', 'ISO 14001 환경경영시스템 인증서', '친환경 설계 및 엔지니어링 환경경영시스템 국제인증')">
+<div class="cert-item-main"><div class="cert-icon iso">ISO<br>14001</div><div><strong>환경경영시스템 (ISO 14001)</strong><span>지속가능한 친환경 인프라 설계 환경인증</span></div></div>
+<span class="cert-view-badge">인증서 보기 🔍</span>
+</div>
+<div class="cert-item" onclick="openCertModal('img/certs/cert_iso_45001.jpg', 'ISO 45001 안전보건경영시스템 인증서', '산업안전 및 보건경영 국제표준 안전인증')">
+<div class="cert-item-main"><div class="cert-icon iso">ISO<br>45001</div><div><strong>안전보건경영시스템 (ISO 45001)</strong><span>설계 안전성(DFS) 및 현장 근로자 안전보건인증</span></div></div>
+<span class="cert-view-badge">인증서 보기 🔍</span>
+</div>
+<div class="cert-item" onclick="openCertModal('img/certs/cert_const_eng_reg.jpg', '건설엔지니어링업 등록증', '국토교통부 서울특별시 공식 등록 (제 서울-002874호)')">
+<div class="cert-item-main"><div class="cert-icon reg">등록증</div><div><strong>건설엔지니어링업 등록증</strong><span>국토교통부 서울특별시 공식 등록(설계·사업관리)</span></div></div>
+<span class="cert-view-badge">등록증 보기 🔍</span>
+</div>
+<div class="cert-item" onclick="openCertModal('img/certs/cert_eng_report.jpg', '엔지니어링사업자 신고증', '산업통상자원부 한국엔지니어링협회 공인 신고증 (제 E-09-2457호)')">
+<div class="cert-item-main"><div class="cert-icon reg">신고증</div><div><strong>엔지니어링사업자 신고증</strong><span>철도·구조·토질·측량 분야 공식 신고증</span></div></div>
+<span class="cert-view-badge">신고증 보기 🔍</span>
+</div>
+<div class="cert-item" onclick="openCertModal('img/certs/cert_engineer_proof.jpg', '한국엔지니어링협회 기술자보유증명서', '공인 기술자 보유증명 및 엔지니어링 경영상태 확인서')">
+<div class="cert-item-main"><div class="cert-icon reg">보유증명</div><div><strong>공인 기술자 보유증명서</strong><span>한국엔지니어링협회 공인 기술인력 증명</span></div></div>
+<span class="cert-view-badge">증명서 보기 🔍</span>
+</div>
+</div>
+<div class="team-card-actions">
+<button type="button" class="btn-cert-all" onclick="openCertModal('img/certs/cert_p7.jpg', '엔지니어링사업자 신고증 및 건설엔지니어링업 등록증', '공식 인허가 등록증 및 신고증 원본 일괄')">📄 인허가 등록증 일괄보기</button>
+<button type="button" class="btn-cert-all" onclick="openCertModal('img/certs/cert_p9.jpg', 'ISO 9001 · ISO 14001 인증서 원본', '품질 및 환경경영시스템 공인 인증서 원본')">🏆 ISO 인증서 일괄보기</button>
+</div>
+</div>
+
+<!-- 2. 특허 및 지식재산권 (8대 핵심 특허·디자인 등록) -->
+<div class="team-card">
+<div class="team-card-header">
+<h3><span class="icon-badge" style="background:linear-gradient(135deg,#1E3A8A,#2563EB)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>특허 및 지식재산권 (8대 핵심 특허·디자인 등록)</h3>
+<p class="team-card-desc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>각 항목을 클릭하시면 대한민국 특허청 공식 특허증 및 디자인등록증 원본을 고화질로 확인하실 수 있습니다.</p>
+</div>
+
+<div class="patent-grid">
+<!-- 특허 1 -->
+<div class="patent-item" onclick="openCertModal('img/certs/cert_patent_soundproof_wall.jpg', '강관 케이싱을 이용한 친환경적 가설방음벽 기초 설치 공법 (특허증)', '대한민국 특허청 정식 등록 특허증 (발명의 명칭: 강관 케이싱을 이용한 친환경적 가설방음벽 기초 설치 공법)')">
+<div class="patent-item-main">
+<div class="cert-icon patent">특허증</div>
+<div>
+<strong>친환경 가설방음벽 기초 설치 공법</strong>
+<span>강관 케이싱 이용 환경친화적 기초 시공 특허</span>
+</div>
+</div>
+<span class="cert-view-badge">특허증 보기 🔍</span>
+</div>
+
+<!-- 특허 2 -->
+<div class="patent-item" onclick="openCertModal('img/certs/cert_patent_trenchless_space.jpg', '비개착 지하공간 개발 공법 (특허 제10-2884471호)', '대한민국 특허청 정식 등록 특허증 (도심지 비개착 지하공간 및 대심도 굴착 개발 공법)')">
+<div class="patent-item-main">
+<div class="cert-icon patent">특허증</div>
+<div>
+<strong>비개착 지하공간 개발 공법</strong>
+<span>특허 제10-2884471호 (도심지 비개착 특화공법)</span>
+</div>
+</div>
+<span class="cert-view-badge">특허증 보기 🔍</span>
+</div>
+
+<!-- 특허 3 -->
+<div class="patent-item" onclick="openCertModal('img/certs/cert_patent_blade_control.jpg', '양방향회전 블레이드 체결 콘트롤 시스템 (특허증)', '대한민국 특허청 정식 등록 특허증 (신재생에너지 및 구조 설비 체결 콘트롤 시스템)')">
+<div class="patent-item-main">
+<div class="cert-icon patent">특허증</div>
+<div>
+<strong>양방향회전 블레이드 체결 콘트롤</strong>
+<span>신재생 설비 체결 콘트롤 시스템 특허</span>
+</div>
+</div>
+<span class="cert-view-badge">특허증 보기 🔍</span>
+</div>
+
+<!-- 특허 4: 결정서 -->
+<div class="patent-item" onclick="openCertModal('img/certs/cert_patent_decision_trenchless.jpg', '비개착 지하공간 개발 공법 특허결정서', '대한민국 특허청 공식 심사 통과 특허결정 통지서 (출원번호 P24-0393-DJA)')">
+<div class="patent-item-main">
+<div class="cert-icon patent">결정서</div>
+<div>
+<strong>비개착 지하공간 개발 특허결정서</strong>
+<span>특허청 심사 통과 공식 특허결정 통지서</span>
+</div>
+</div>
+<span class="cert-view-badge">결정서 보기 🔍</span>
+</div>
+
+<!-- 디자인 1 -->
+<div class="patent-item" onclick="openCertModal('img/certs/cert_design_hbeam_1.jpg', 'H빔 연결 부재 디자인 1호 (디자인등록증)', '특허청 공식 디자인등록증 (가시설 H-Pile 지보공 연결 부재 디자인 1호)')">
+<div class="patent-item-main">
+<div class="cert-icon design">디자인</div>
+<div>
+<strong>H빔 연결 부재 디자인 1호</strong>
+<span>특허청 디자인등록 (가시설 H-Pile 지보공 연결)</span>
+</div>
+</div>
+<span class="cert-view-badge">등록증 보기 🔍</span>
+</div>
+
+<!-- 디자인 2 -->
+<div class="patent-item" onclick="openCertModal('img/certs/cert_design_hbeam_2.jpg', 'H빔 연결 부재 디자인 2호 (디자인등록증)', '특허청 공식 디자인등록증 (가시설 H-Pile 지보공 연결 부재 디자인 2호)')">
+<div class="patent-item-main">
+<div class="cert-icon design">디자인</div>
+<div>
+<strong>H빔 연결 부재 디자인 2호</strong>
+<span>특허청 디자인등록 (구조적 결합 안전성 향상)</span>
+</div>
+</div>
+<span class="cert-view-badge">등록증 보기 🔍</span>
+</div>
+
+<!-- 디자인 3 -->
+<div class="patent-item" onclick="openCertModal('img/certs/cert_design_hbeam_3.jpg', 'H빔 연결 부재 디자인 3호 (디자인등록증)', '특허청 공식 디자인등록증 (가시설 H-Pile 지보공 연결 부재 디자인 3호)')">
+<div class="patent-item-main">
+<div class="cert-icon design">디자인</div>
+<div>
+<strong>H빔 연결 부재 디자인 3호</strong>
+<span>특허청 디자인등록 (현장 시공 편의성 특화)</span>
+</div>
+</div>
+<span class="cert-view-badge">등록증 보기 🔍</span>
+</div>
+
+<!-- 특허등록원부 -->
+<div class="patent-item" onclick="openCertModal('img/certs/cert_patent_reg_blade.jpg', '양방향회전 블레이드 체결 콘트롤 시스템 특허등록원부', '대한민국 특허청 정식 발행 특허등록원부 원본 증명')">
+<div class="patent-item-main">
+<div class="cert-icon patent">등록원부</div>
+<div>
+<strong>특허등록원부 증명 (블레이드 체결)</strong>
+<span>특허청 공식 등록원부 원본 증명서</span>
+</div>
+</div>
+<span class="cert-view-badge">등록원부 보기 🔍</span>
+</div>
+</div>
+
+<div class="team-card-actions">
+<button type="button" class="btn-cert-all" onclick="openCertModal('img/certs/cert_patent_soundproof_wall.jpg', '두자 특허증 원본 모음', '친환경 가설방음벽 기초 공법 및 비개착 지하공간 개발 공법 특허증 원본')">📜 특허증 원본 일괄보기</button>
+<button type="button" class="btn-cert-all" onclick="openCertModal('img/certs/cert_design_hbeam_1.jpg', '두자 디자인등록증 원본 모음', '가시설 H빔 연결 부재 1호·2호·3호 특허청 디자인등록증')">📐 디자인등록증 일괄보기</button>
+<button type="button" class="btn-cert-all" onclick="openCertModal('img/certs/cert_patent_decision_trenchless.jpg', '비개착 지하공간 개발 공법 특허결정서', '대한민국 특허청 공식 심사통과 특허결정 통지서')">📑 특허결정서 보기</button>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT (정확한 네이버 항공/위성 위치도 연동) -->
+<section id="contact">
+<div class="container">
+<div class="section-header section-header-center"><span class="section-tag">LOCATION</span><h2>오시는 길</h2></div>
+<div class="contact-layout">
+
+<!-- 회사 정보 및 대중교통 안내 -->
+<div class="contact-info-card">
+<div class="contact-info-header">
+<h3>(주)두자 본사 위치 안내</h3>
+<p>방문 전 연락 주시면 더욱 원활한 안내를 도와드리겠습니다.</p>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+<div><strong>주소</strong><p>서울특별시 동대문구 장한로24길 21, JK빌딩 5층<br><span style="font-size:13px;color:var(--gray-500)">(지번: 장안동 344-7 / 우편번호: 02637)</span></p></div>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+<div><strong>전화 / FAX</strong><p>T. 02-2213-2634 &nbsp;|&nbsp; F. 02-2213-2635</p></div>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+<div><strong>이메일</strong><p>info@dooja.co.kr</p></div>
+</div>
+
+<!-- 대중교통 안내 -->
+<div class="traffic-guide">
+<h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>교통편 상세 안내</h4>
+<ul class="traffic-list">
+<li><span class="traffic-tag tag-subway">지하철</span> <strong>5호선 장한평역 3번 출구</strong> (도보 약 10분 또는 환승)</li>
+<li><span class="traffic-tag tag-bus">버&nbsp;&nbsp;&nbsp;&nbsp;스</span> <strong>장안2동주민센터 / 현대벤처빌</strong> 정류장 하차 (도보 2분)</li>
+<li><span class="traffic-tag tag-car">자가용</span> 내비게이션에 <strong>"동대문구 장한로24길 21"</strong> 또는 <strong>"JK빌딩"</strong> 검색 (건물 내 주차 가능)</li>
+</ul>
+</div>
+</div>
+
+<!-- 정확한 네이버 항공/위성 위치도 뷰 & 길찾기 바로가기 -->
+<div class="contact-map-card">
+<div class="map-container" onclick="openCertModal('img/map_naver_full.jpg', '네이버 지도 상세 위치도', '서울특별시 동대문구 장한로24길 21 JK빌딩 5층 ((주)두자 본사 위치)')" title="클릭하시면 네이버 지도 원본 위치도를 크게 보실 수 있습니다.">
+<img src="img/map_naver_crop.jpg" alt="(주)두자 본사 네이버 지도 상세 위치도" class="naver-map-img">
+<div class="map-overlay-badge">
+<strong>📍 (주)두자 본사 위치 (JK빌딩 5층)</strong>
+<span>클릭 시 네이버 지도 고화질 확대 🔍</span>
+</div>
+</div>
+<div class="map-actions">
+<a href="https://map.naver.com/p/entry/coordinates/321Ch8.2AMdf?c=17,12,0,0,2,dh" target="_blank" rel="noopener noreferrer" class="btn-map-link btn-naver">
+<span>🟢 네이버 지도로 위치·길찾기</span>
+</a>
+<a href="https://map.kakao.com/link/search/서울특별시 동대문구 장한로24길 21" target="_blank" rel="noopener noreferrer" class="btn-map-link btn-kakao">
+<span>🟡 카카오맵으로 위치·길찾기</span>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<img src="img/logo.png" alt="(주)두자" class="footer-logo">
+<p>구조와 안전을 설계하는<br>건설엔지니어링 전문기업</p>
+<p style="margin-top:10px;font-size:12px;color:var(--orange-400)">홈페이지 리비전: R13 (태양광 및 작업실적 4대 핵심 분야 2x2 완벽 대칭 레이아웃 배치)</p>
+</div>
+<div class="footer-links"><h4>바로가기</h4><ul><li><a href="#about">회사소개</a></li><li><a href="#services">업무분야</a></li><li><a href="#portfolio">작업실적</a></li><li><a href="#projects">수행실적</a></li><li><a href="#team">인증·특허</a></li><li><a href="#contact">오시는 길</a></li></ul></div>
+<div class="footer-links"><h4>업무분야</h4><ul><li><a href="#services">가설구조물</a></li><li><a href="#services">태양광 발전</a></li><li><a href="#services">토목구조</a></li><li><a href="#services">흙막이 가시설</a></li><li><a href="#services">철도 및 도로</a></li></ul></div>
+<div class="footer-contact"><h4>연락처</h4><p>서울 동대문구 장한로24길 21, JK빌딩 5층</p><p>T. 02-2213-2634</p><p>F. 02-2213-2635</p><p>E. info@dooja.co.kr</p></div>
+</div>
+<div class="footer-bottom"><p>&copy; 2026 (주)두자 DooJa Engineering. All rights reserved. | Revision R13</p></div>
+</div>
+</footer>
+
+<!-- LIGHTBOX MODAL (자격증, 도면 및 실적 팝업) -->
+<div class="lightbox" id="lightbox">
+<div class="lightbox-wrap">
+<button class="lightbox-close" onclick="closeLightbox()" aria-label="닫기">&times;</button>
+<img id="lightboxImg" src="" alt="증명서 / 실적 이미지">
+<div class="lightbox-caption">
+<h3 id="lightboxTitle"></h3>
+<p id="lightboxDesc"></p>
+</div>
+</div>
+</div>
+
+<!-- BACK TO TOP -->
+<a href="#hero" id="backToTop" aria-label="맨 위로 이동"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></a>
+
+<script>
+/* =====================================================
+   (주)두자 DooJa Engineering - R10 Interactive Scripts
+   ===================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Sticky Nav & Back to Top ---
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY > 50;
+        navbar.classList.toggle('scrolled', scrolled);
+        if (backToTop) {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        }
+    }, { passive: true });
+
+    // --- Mobile Menu Toggle ---
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
+    // --- Stats Counter ---
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let animated = false;
+    function animateStats() {
+        if (animated) return;
+        const statsSection = document.getElementById('stats');
+        if (!statsSection) return;
+        const rect = statsSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            animated = true;
+            statNumbers.forEach(num => {
+                const target = parseInt(num.dataset.count, 10);
+                const dur = 1800;
+                const start = performance.now();
+                function update(now) {
+                    const t = Math.min((now - start) / dur, 1);
+                    const ease = 1 - Math.pow(1 - t, 3);
+                    num.textContent = Math.floor(target * ease);
+                    if (t < 1) requestAnimationFrame(update);
+                    else num.textContent = target;
+                }
+                requestAnimationFrame(update);
+            });
+        }
+    }
+    window.addEventListener('scroll', animateStats, { passive: true });
+    animateStats();
+
+    // --- Portfolio Tabs ---
+    const pTabBtns = document.querySelectorAll('.portfolio-tab-btn');
+    const pItems = document.querySelectorAll('.portfolio-card');
+    const pGrid = document.querySelector('.portfolio-grid');
+    function filterPortfolio(filter) {
+        pTabBtns.forEach(b => b.classList.toggle('active', b.dataset.pfilter === filter));
+        let visibleCount = 0;
+        pItems.forEach(item => {
+            if (filter === 'all' || item.dataset.cat === filter) {
+                item.style.display = '';
+                item.style.animation = 'fadeInUp .4s ease-out both';
+                visibleCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+        // If 4 items (like solar/retaining), use balanced 2-column grid on desktop
+        if (pGrid) {
+            if (visibleCount === 4 && window.innerWidth > 960) {
+                pGrid.classList.add('grid-2col');
+            } else {
+                pGrid.classList.remove('grid-2col');
+            }
+        }
+    }
+
+    pTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterPortfolio(btn.dataset.pfilter);
+        });
+    });
+
+    // --- Service card '작업실적 보기' button click ---
+    const serviceBtns = document.querySelectorAll('.service-btn');
+    serviceBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.dataset.filter;
+            if (filter) {
+                filterPortfolio(filter);
+            }
+        });
+    });
+
+    // --- Project tabs ---
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const rows = document.querySelectorAll('.projects-table tbody tr');
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const tab = btn.dataset.tab;
+            rows.forEach(row => {
+                if (tab === 'all' || row.dataset.cat === tab) {
+                    row.style.display = '';
+                    row.style.animation = 'fadeInUp .4s ease-out both';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // --- Active nav on scroll ---
+    const sections = document.querySelectorAll('section[id]');
+    function updateNav() {
+        const y = window.scrollY + 150;
+        sections.forEach(s => {
+            const top = s.offsetTop, h = s.offsetHeight, id = s.id;
+            if (y >= top && y < top + h) {
+                document.querySelectorAll('.nav-link').forEach(l => {
+                    l.classList.toggle('active', l.getAttribute('href') === `#${id}`);
+                });
+            }
+        });
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+});
+
+// --- Lightbox ---
+function openLightbox(el) {
+    const lb = document.getElementById('lightbox');
+    const img = el.querySelector('img');
+    const title = el.querySelector('.portfolio-info h3') || el.querySelector('.portfolio-caption h3');
+    const desc = el.querySelector('.portfolio-info p') || el.querySelector('.portfolio-caption p');
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightboxTitle').textContent = title ? title.textContent : '';
+    document.getElementById('lightboxDesc').textContent = desc ? desc.textContent : '';
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function openCertModal(imgSrc, title, desc) {
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightboxImg').src = imgSrc;
+    document.getElementById('lightboxTitle').textContent = title || '공인 자격 및 인증 증명서';
+    document.getElementById('lightboxDesc').textContent = desc || '(주)두자 공인 자격증 및 인증서 원본 증명';
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+document.getElementById('lightbox').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget || e.target.classList.contains('lightbox-wrap')) closeLightbox();
+});
+document.addEventListener('keydown', (e) => { 
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
+
+// --- Hero Video & Static Mode Click Toggle ---
+function toggleHeroVideoMode() {
+    const hero = document.getElementById('hero');
+    const vid = document.getElementById('heroVideoBg');
+    const tag = document.getElementById('heroVidTagText');
+    const btn = document.getElementById('heroToggleBtn');
+    const dot = document.getElementById('heroPulseDot');
+    
+    if (!hero) return;
+    
+    if (hero.classList.contains('mode-static')) {
+        hero.classList.remove('mode-static');
+        if (vid) {
+            vid.play().catch(e => console.log('Autoplay error:', e));
+        }
+        if (tag) tag.textContent = '🎥 흙막이 가시설 시공 동영상 (화면 클릭 시 정지화면 전환)';
+        if (btn) btn.textContent = '⏸️ 정지화면';
+        if (dot) dot.style.background = '#00ff80';
+    } else {
+        hero.classList.add('mode-static');
+        if (vid) {
+            vid.pause();
+        }
+        if (tag) tag.textContent = '🖼️ 정지화면 모드 [원래 화면] (화면 클릭 시 동영상 재생)';
+        if (btn) btn.textContent = '▶️ 영상재생';
+        if (dot) dot.style.background = '#f5a623';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.getElementById('hero');
+    if (hero) {
+        hero.addEventListener('click', (e) => {
+            if (e.target.closest('a, button, .btn, .nav-link, input, select')) return;
+            toggleHeroVideoMode();
+        });
+    }
+    const heroVid = document.getElementById('heroVideoBg');
+    if (heroVid) {
+        heroVid.play().catch(e => console.log('Autoplay handled:', e));
+    }
+});
+</script>
+</body>
+</html>
